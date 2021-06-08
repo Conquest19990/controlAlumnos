@@ -1,0 +1,37 @@
+*{
+    blueColor: #2F5597;
+    whiteColor: #FCFCF7;
+    greenColor: #305B4F;
+    greyStrColor: #343A40;
+    greyColor: #8F8F8F;
+    greyWhiteColor: #D9D9D9;
+
+    greenFlag: #0a7935;
+    yellowFlag: #caba27;
+    orangeFlag: #b4611d;
+    redFlag: #8a120e;
+
+}
+
+#mainPane{
+    -fx-background-color: greyWhiteColor;
+}
+
+.button{
+    -fx-background-radius: 0em;
+    -fx-background-color: greyStrColor;
+    -fx-font-size: 1.20em;
+    -fx-text-fill: whiteColor; 
+    -fx-font-weight: bold;
+}
+
+#estado{
+    
+    -fx-background-color: greenFlag;
+    -fx-background-radius: 5em;
+    -fx-min-width: 75px;
+    -fx-min-height: 75px;
+    -fx-max-width: 75px;
+    -fx-max-height: 75px;
+    
+}

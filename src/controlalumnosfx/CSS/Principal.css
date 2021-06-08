@@ -1,0 +1,64 @@
+*{
+    blueColor: #2F5597;
+    whiteColor: #FCFCF7;
+    greenColor: #305B4F;
+    greyStrColor: #343A40;
+    greyColor: #8F8F8F;
+    greyWhiteColor: #D9D9D9;
+}
+#labelPass, #labelUser, #loginButton, #registerButton, #logCheck{
+    -fx-font-size: 1.20em;
+    -fx-text-fill: whiteColor; 
+    -fx-font-weight: bold;
+    
+}
+#labelPass, #labelUser{
+
+}
+#loginNotFound{
+    -fx-font-size: 1.2em;
+    -fx-text-fill: #fcff2f;
+    -fx-font-weight: bold;
+}
+
+#userField, #passField{
+    -fx-font-size: 1.5em;
+    -fx-text-fill: greyStrColor;
+    -fx-background-radius: 0em;
+}
+
+#logCheck{
+    -fx-text-fill: whiteColor;   
+}
+
+#leftButton, #rightButton{
+    -fx-font-weight: 900;
+    -fx-font-size: 1.5em;
+    -fx-background-radius: 0em;
+    -fx-text-fill: whiteColor;
+    -fx-background-color: greyStrColor;
+}
+
+#logTopPane{
+    -fx-background-color: greyColor;
+}
+
+#logBotPane{
+    -fx-background-color: greenColor;
+}
+
+#loginPane{
+    -fx-background-color: blueColor;
+}
+#main{
+    -fx-background-color: greyWhiteColor;
+}
+#loginButton, #registerButton{
+    -fx-background-color: greyStrColor;
+    -fx-text-fill: whiteColor;
+    -fx-background-radius: 0em;
+}
+#im1, #im2, #im3{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 10, 10);
+    
+}
