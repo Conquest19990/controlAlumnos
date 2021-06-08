@@ -1,6 +1,0 @@
-Root	1234	ITCM	Gerardo	Beltran	Torres	Tester
-JDepS	1234	TECNM	Fausto	Gonzalez	Ramirez	Jefe Depto.
-Gera	123	ITCM	Gerry	Beklt	Torr	Jefe Dpto.	
-sa	sasa	ITCM	Esteban	Quito	Gonzalez	Tester
-Quenails	123456	Texano	Etkar	De	Leon	Jefe Dpto.
-asda	fqf	qwd	dqwd	wq	deqwdq	Coordinador
