@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="mainPane" fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@CSS/mainApp.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlalumnosfx.appController">
+   <center>
+      <AnchorPane id="anchoStyle" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="720.0" prefWidth="1280.0" />
+            <MenuBar prefHeight="30.0" prefWidth="1280.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Archivo">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Nuevo" />
+                        <MenuItem fx:id="openFile" mnemonicParsing="false" onAction="#onOpenFile" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Editar">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onEditAlu" text="Editar Alumno" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Ayuda">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <TabPane id="tabs" fx:id="tabPaneApp" layoutY="24.0" prefHeight="683.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="segTab" text="Seguimiento">
+                     <content>
+                        <HBox prefHeight="166.0" prefWidth="1280.0">
+                           <children>
+                              <GridPane id="misc" prefHeight="587.0" prefWidth="239.0">
+                                 <children>
+                                    <Label id="miscText" alignment="CENTER" contentDisplay="CENTER" text="SEXO" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" />
+                                    <Label id="miscText" text="N.CONTROL" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField id="miscFields" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label id="miscText" text="NOMBRE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField id="miscFields" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label id="miscText" text="ESPECIALDIAD" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <ComboBox id="miscFields" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <ComboBox id="miscFields" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <Label id="miscText" text="FILTROS" underline="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.33333587646484" minWidth="10.0" prefWidth="31.333332061767578" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.6666717529297" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.33332824707031" minWidth="10.0" prefWidth="28.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <ScrollPane id="scrollStyle" prefHeight="625.0" prefWidth="1040.0">
+                                 <content>
+                                    <TableView id="tableSeg" fx:id="segTable" prefHeight="653.0" prefWidth="1026.0">
+                                       <columns>
+                                          <TableColumn fx:id="nCtlCol" prefWidth="133.66665649414062" text="N. Control" />
+                                          <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="263.3333435058594" text="Nombre" />
+                                          <TableColumn fx:id="sexCol" minWidth="0.0" prefWidth="60.66668701171875" text="Sexo" />
+                                          <TableColumn fx:id="ageCol" minWidth="0.0" prefWidth="64.66668701171875" text="Edad" />
+                                          <TableColumn fx:id="semCol" minWidth="0.0" prefWidth="66.6666259765625" text="Semestre" />
+                                          <TableColumn fx:id="crPrCol" minWidth="0.0" prefWidth="55.3333740234375" text="Cr. Apr" />
+                                          <TableColumn fx:id="cargaCol" minWidth="0.0" prefWidth="74.0" text="Carga" />
+                                          <TableColumn fx:id="PromCol" minWidth="0.0" prefWidth="71.33331298828125" text="Promedio" />
+                                          <TableColumn fx:id="espCol" prefWidth="247.0" text="Especialidad" />
+                                       </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                     </content>
+                  </Tab>
+                  <Tab text="Asesorias">
+                     <content>
+                        <HBox prefHeight="166.0" prefWidth="1280.0">
+                           <children>
+                              <GridPane prefHeight="621.0" prefWidth="239.0">
+                                 <children>
+                                    <Label text="N.CONTROL" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="NOMBRE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label text="MATERIA" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label text="FILTROS" underline="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.33333587646484" minWidth="10.0" prefWidth="31.333332061767578" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.6666717529297" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.33332824707031" minWidth="10.0" prefWidth="28.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <ScrollPane prefHeight="621.0" prefWidth="1040.0">
+                                 <content>
+                                    <TableView prefHeight="618.0" prefWidth="1040.0">
+                                       <columns>
+                                          <TableColumn prefWidth="155.33334350585938" text="N. Control" />
+                                          <TableColumn minWidth="0.0" prefWidth="316.6666564941406" text="Nombre" />
+                                          <TableColumn minWidth="0.0" prefWidth="180.66668701171875" text="Semestre" />
+                                          <TableColumn minWidth="0.0" prefWidth="175.33331298828125" text="Materia" />
+                                          <TableColumn prefWidth="212.66668701171875" text="Horario" />
+                                       </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                     </content>
+                  </Tab>
+                  <Tab text="Altas &amp; Bajas">
+                     <content>
+                        <HBox prefHeight="166.0" prefWidth="1280.0">
+                           <children>
+                              <GridPane prefHeight="621.0" prefWidth="239.0">
+                                 <children>
+                                    <Label text="N.CONTROL" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="NOMBRE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label text="MATERIA" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label text="FILTROS" underline="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.33333587646484" minWidth="10.0" prefWidth="31.333332061767578" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.6666717529297" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.33332824707031" minWidth="10.0" prefWidth="28.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <ScrollPane prefHeight="621.0" prefWidth="1040.0">
+                                 <content>
+                                    <TableView prefHeight="618.0" prefWidth="1040.0">
+                                       <columns>
+                                          <TableColumn prefWidth="188.66665649414062" text="N. Control" />
+                                          <TableColumn minWidth="0.0" prefWidth="301.3333435058594" text="Nombre" />
+                                          <TableColumn minWidth="0.0" prefWidth="186.0" text="Semestre" />
+                                          <TableColumn minWidth="0.0" prefWidth="99.0" text="Alta/Baja" />
+                                          <TableColumn prefWidth="264.33331298828125" text="Materia" />
+                                       </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
